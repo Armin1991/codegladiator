@@ -1,6 +1,6 @@
 import flask
 import pymongo
-import pandas
+
 
 
 class Mongo(object):
