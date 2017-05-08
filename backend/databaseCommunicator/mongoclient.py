@@ -5,7 +5,7 @@ import pymongo
 
 class Mongo(object):
     def __init__(self):
-        self.client = pymongo.MongoClient(host="localhost",port=27017)
+        self.client = pymongo.MongoClient(host="172.29.9.8",port=27017)
         self.database = self.client.codeGladiator
         self.collection = self.database.testdata
 

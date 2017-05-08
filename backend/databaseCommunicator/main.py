@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 api = Api(app)
 api.add_resource(List,'/codegladiator/api/list')
-api.add_resource(HelloWorld,'/termextractor/api/hello')
+api.add_resource(HelloWorld,'/codegladiator/api/hello')
 # api.add_resource(Scores,'/termextractor/api/scores')
 # api.add_resource(Phrases,'/termextractor/api/phrases')
 #api.add_resource(FMJ,'/termextractor/api/fmj')
