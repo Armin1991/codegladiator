@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from handlerClass import List
 from handlerClass import HelloWorld
-
+from logger import Logger
 # import FMJ
 
 
@@ -19,7 +19,7 @@ api.add_resource(HelloWorld,'/codegladiator/api/hello')
 #api.add_resource(FMJ,'/termextractor/api/fmj')
 
 
-app.run(debug=True,host='0.0.0.0')
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    log = Logger()
+    log.message("Starting the application")
+    app.run(debug=True,host='0.0.0.0')

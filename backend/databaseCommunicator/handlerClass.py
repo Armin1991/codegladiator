@@ -1,4 +1,5 @@
 import flask
+
 from mongoclient import Mongo
 from flask_restful import Resource
 class List(Resource):

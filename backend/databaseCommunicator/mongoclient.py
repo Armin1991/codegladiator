@@ -1,11 +1,14 @@
-import flask
+
 import pymongo
 
-
-
+from logger import Logger
+from requests import Requests
 class Mongo(object):
     def __init__(self):
-        self.client = pymongo.MongoClient(host="172.29.9.8",port=27017)
+        self.logger = Logger()
+        self.request = Requests()
+        self.hostPort = self.request.getHostPort("mongoDB")
+        self.client = pymongo.MongoClient(host=self.hostPort['Host'],port=self.hostPort["Port"])
         self.database = self.client.codeGladiator
         self.collection = self.database.testdata
 
