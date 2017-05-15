@@ -3,6 +3,7 @@ from flask_restful import Api
 from handlerClass import List
 from handlerClass import HelloWorld
 from logger import Logger
+from config import config as con
 # import FMJ
 app = Flask(__name__)
 
@@ -14,4 +15,4 @@ api.add_resource(HelloWorld, '/codegladiator/api/hello')
 if __name__ == '__main__':
     log = Logger()
     log.message("Starting the application")
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host=con.application_host)

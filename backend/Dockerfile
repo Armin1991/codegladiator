@@ -4,4 +4,5 @@ RUN pip install flask && \
     pip install pymongo && \
     pip install requests
 VOLUME codegladiator
+COPY databaseCommunicator codegladiator/dbCommunicator
 #CMD ["python","codegladiator/backend/databaseCommunicator/main.py"]

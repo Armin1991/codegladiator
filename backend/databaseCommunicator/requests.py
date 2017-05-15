@@ -1,6 +1,6 @@
 import requests
 from logger import Logger
-
+from config import config as con
 
 class Requests(object):
 
@@ -10,7 +10,7 @@ class Requests(object):
 
     def getHostPort(self, serviceName):
         try:
-            self.request = requests.get("http://127.0.0.1:8500/v1/agent/services")
+            self.request = requests.get(con.consul_services)
         except Exception as error:
             self.logger.error(error)
         if self.request:
