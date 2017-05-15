@@ -6,4 +6,4 @@ RUN pip install flask && \
 VOLUME codegladiator
 COPY databaseCommunicator codegladiator/dbCommunicator
 CMD ["mkdir","codegladiator/dbCommunicator/logs"]
-CMD ["python","codegladiator/backend/databaseCommunicator/main.py"]
+#CMD ["python","codegladiator/backend/databaseCommunicator/main.py"]
