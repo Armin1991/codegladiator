@@ -19,4 +19,5 @@ class Mongo(object):
 
     def listAll(self):
         cursor = self.collection.find()
+        print cursor
         return cursor
